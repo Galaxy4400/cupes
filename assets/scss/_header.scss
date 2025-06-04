@@ -1,0 +1,149 @@
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: rem(20) 0px;
+	z-index: 10;
+	// .header__container
+	&__container {
+	}
+	// .header__top
+	&__top {
+		display: flex;
+		justify-content: flex-end;
+		margin: 0px 0px rem(5) 0px;
+	}
+	// .header__slogan
+	&__slogan {
+		color: #fff;
+		text-align: right;
+		font-size: rem(12);
+		font-weight: 500;
+		line-height: 154.036%;
+		letter-spacing: 0.653px;
+		text-transform: uppercase;
+	}
+	// .header__bottom
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: rem(15);
+		@media (max-width: em($md3)) {
+			gap: rem(0);
+		}
+	}
+	// .header__left
+	&__left {
+	}
+	// .header__right
+	&__right {
+		display: flex;
+		gap: rem(32);
+	}
+	// .header__actions
+	&__actions {
+	}
+}
+
+.logo {
+	display: inline-block;
+}
+
+.menu {
+	// .menu__body
+	&__body {
+		@media (max-width: em($md2)) {
+			display: none;
+		}
+	}
+	// .menu__list
+	&__list {
+		display: flex;
+		gap: rem(16);
+		@media (max-width: em(1300)) {
+			gap: rem(0);
+		}
+	}
+	// .menu__item
+	&__item {
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+	// .menu__link
+	&__link {
+		padding: rem(16) rem(0) rem(16) rem(16);
+		color: #fff;
+		font-size: rem(17);
+		font-weight: 500;
+		letter-spacing: 0.8px;
+		white-space: nowrap;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
+				opacity: 0.7;
+			}
+		}
+		@media (max-width: em($md1)) {
+			padding: rem(8) rem(0) rem(8) rem(8);
+		}
+		@media (max-width: em(1120)) {
+			font-size: rem(16);
+		}
+	}
+	// .menu__arrow
+	&__arrow {
+		padding: rem(16) rem(16) rem(16) rem(8);
+		color: #fff;
+		@media (max-width: em($md1)) {
+			padding: rem(8) rem(8) rem(8) rem(8);
+		}
+	}
+	// .menu__sub-list
+	&__sub-list {
+		position: absolute;
+		left: rem(16);
+		top: 100%;
+		background: rgba(255, 255, 255, 0.3);
+		padding: rem(16);
+		min-width: rem(200);
+		opacity: 0;
+		visibility: hidden;
+		display: grid;
+		gap: rem(5);
+		&._visible {
+			opacity: 1;
+			visibility: visible;
+		}
+		// .menu__sub-list_level-1
+		&_level-1 {
+		}
+	}
+	// .menu__sub-item
+	&__sub-item {
+	}
+	// .menu__sub-link
+	&__sub-link {
+		color: #fff;
+		font-weight: 500;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #000;
+				opacity: 0.7;
+			}
+		}
+	}
+}
+
+.header-actions {
+	display: flex;
+	gap: rem(20);
+	align-items: center;
+	// .header-actions__action
+	&__action {
+		color: #fff;
+		display: inline-flex;
+	}
+}

@@ -1,0 +1,228 @@
+.main-slider {
+	position: relative;
+	height: 100vh;
+	// .main-slider__slides
+	&__slides {
+	}
+	// .main-slider__slide
+	&__slide {
+	}
+	// .main-slider__pagination-wrapper
+	&__pagination-wrapper {
+		position: absolute;
+		left: 0;
+		bottom: 10%;
+		width: 100%;
+		z-index: 5;
+		@media (max-width: em($md2)) {
+			bottom: rem(25);
+		}
+	}
+	// .main-slider__pagination
+	&__pagination {
+		display: flex;
+		justify-content: space-between;
+		gap: rem(10) rem(30);
+		@media (max-width: em($md2)) {
+			display: grid;
+		}
+	}
+	// .main-slider__bullet
+	&__bullet {
+		position: relative;
+		min-width: rem(205);
+		padding: rem(28) 0px 0px 0px;
+		@media (max-width: em($md2)) {
+			padding: rem(15) 0px 0px 0px;
+		}
+		cursor: pointer;
+		&::before {
+			content: "";
+			background: #c00;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: rem(5);
+			@media (max-width: em($md2)) {
+				height: rem(2);
+			}
+		}
+	}
+	// .main-slider__bullet-title
+	&__bullet-title {
+		white-space: nowrap;
+		color: #fff;
+		font-size: rem(19);
+		font-weight: 600;
+		opacity: 0.5;
+		transition: all 0.3s ease 0s;
+		.main-slider__bullet._active & {
+			opacity: 1;
+		}
+	}
+}
+
+//---------------------------------------------------------------
+.main-slide {
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: linear-gradient(259deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+	}
+	// .main-slide__container
+	&__container {
+		height: 100%;
+	}
+	// .main-slide__content
+	&__content {
+		position: relative;
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+	// .main-slide__title
+	&__title {
+		color: #fff;
+		font-size: rem(60);
+		font-weight: 500;
+		line-height: 120%;
+		max-width: rem(750);
+		@media (max-width: em($md2)) {
+			font-size: rem(52);
+		}
+		@media (max-width: em($md3)) {
+			font-size: rem(44);
+		}
+		@media (max-width: em($md4)) {
+			font-size: rem(36);
+		}
+	}
+	// .main-slide__bg
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+}
+
+//===============================================================
+.events {
+	padding: rem(90) 0px;
+	// .events__container
+	&__container {
+	}
+	// .events__body
+	&__body {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		gap: rem(60);
+	}
+	// .events__left
+	&__left {
+		display: grid;
+		gap: rem(40);
+	}
+	// .events__title
+	&__title {
+	}
+	// .events__list
+	&__list {
+		display: grid;
+		gap: rem(42);
+	}
+	// .events__item
+	&__item {
+	}
+	// .events__right
+	&__right {
+	}
+}
+
+//---------------------------------------------------------------
+.events-item {
+	display: grid;
+	gap: rem(12);
+	// .events-item__text
+	&__text {
+		font-size: rem(21);
+		line-height: 166.667%;
+		@media (max-width: em($md3)) {
+			font-size: rem(18);
+		}
+	}
+	// .events-item__footer
+	&__footer {
+		display: flex;
+		align-items: center;
+		gap: rem(20);
+	}
+	// .events-item__time
+	&__time {
+		border-radius: rem(999);
+		border: rem(2) solid #f5f5f5;
+		color: #c00;
+		font-size: rem(17);
+		font-weight: 500;
+		padding: rem(14) rem(25);
+	}
+	// .events-item__place
+	&__place {
+		display: flex;
+		align-items: center;
+		font-size: rem(18);
+		gap: rem(10);
+		svg {
+			color: #c00;
+		}
+	}
+}
+
+//---------------------------------------------------------------
+.event-figure {
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
+			linear-gradient(180deg, rgba(0, 0, 0, 0) 36.5%, rgba(0, 0, 0, 0.8) 100%);
+	}
+	// .event-figure__content
+	&__content {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 3;
+		color: #fff;
+		padding: rem(30);
+		display: grid;
+		gap: rem(10);
+	}
+	// .event-figure__title
+	&__title {
+		color: #fff !important;
+	}
+	// .event-figure__text
+	&__text {
+		font-size: rem(17);
+		line-height: 176.471%;
+	}
+	// .event-figure__img
+	&__img {
+	}
+}
+
+//===============================================================
