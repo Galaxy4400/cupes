@@ -38,7 +38,7 @@
 		cursor: pointer;
 		&::before {
 			content: "";
-			background: #c00;
+			background: var(--color-main);
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -116,7 +116,13 @@
 
 //===============================================================
 .events {
-	padding: rem(90) 0px;
+	padding: rem(90) 0px rem(40);
+	@media (max-width: em($md2)) {
+		padding: rem(60) 0px rem(40);
+	}
+	@media (max-width: em($md3)) {
+		padding: rem(30);
+	}
 	// .events__container
 	&__container {
 	}
@@ -124,7 +130,10 @@
 	&__body {
 		display: grid;
 		grid-template-columns: 1fr auto;
-		gap: rem(60);
+		gap: rem(30) rem(60);
+		@media (max-width: em($md2)) {
+			grid-template-columns: 1fr;
+		}
 	}
 	// .events__left
 	&__left {
@@ -162,14 +171,16 @@
 	// .events-item__footer
 	&__footer {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		gap: rem(20);
 	}
 	// .events-item__time
 	&__time {
 		border-radius: rem(999);
+		white-space: nowrap;
 		border: rem(2) solid #f5f5f5;
-		color: #c00;
+		color: var(--color-main);
 		font-size: rem(17);
 		font-weight: 500;
 		padding: rem(14) rem(25);
@@ -181,7 +192,7 @@
 		font-size: rem(18);
 		gap: rem(10);
 		svg {
-			color: #c00;
+			color: var(--color-main);
 		}
 	}
 }
@@ -189,6 +200,7 @@
 //---------------------------------------------------------------
 .event-figure {
 	position: relative;
+	max-width: rem(420);
 	&::before {
 		content: "";
 		position: absolute;
@@ -226,3 +238,255 @@
 }
 
 //===============================================================
+.achievements {
+	padding: rem(90) 0px;
+	@media (max-width: em($md2)) {
+		padding: rem(60) 0px;
+	}
+	@media (max-width: em($md3)) {
+		padding: rem(30) 0px;
+	}
+	// .achievements__container
+	&__container {
+	}
+	// .achievements__title-wrapper
+	&__title-wrapper {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		margin: 0px 0px rem(90) 0px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			height: rem(1);
+			background: var(--color-background);
+			z-index: -1;
+		}
+	}
+	// .achievements__title
+	&__title {
+		text-align: center;
+		background: var(--color-body-background);
+		padding: 0px rem(25);
+		@media (max-width: em($md2)) {
+			margin: 0px 0px rem(70) 0px;
+		}
+		@media (max-width: em($md3)) {
+			margin: 0px 0px rem(50) 0px;
+		}
+		@media (max-width: em($md4)) {
+			margin: 0px 0px rem(30) 0px;
+		}
+	}
+	// .achievements__body
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: rem(30) rem(0);
+		@media (max-width: em($md2)) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: em($md4)) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	// .achievements__item
+	&__item {
+	}
+}
+
+//---------------------------------------------------------------
+.achievements-item {
+	position: relative;
+	display: grid;
+	gap: rem(60);
+	text-align: center;
+	align-content: start;
+	padding: 0px rem(30);
+	@media (max-width: em($md2)) {
+		gap: rem(45);
+	}
+	@media (max-width: em($md3)) {
+		gap: rem(30);
+	}
+	@media (max-width: em($md4)) {
+		gap: rem(15);
+	}
+	@media (min-width: em($md2+1)) {
+		&:not(:last-child) {
+			border-right: rem(1) solid var(--color-background);
+		}
+	}
+	// .achievements-item__title
+	&__title {
+		color: var(--color-main);
+		font-size: rem(64);
+		font-weight: 500;
+		line-height: normal;
+		@media (max-width: em($md2)) {
+			font-size: rem(56);
+		}
+		@media (max-width: em($md3)) {
+			font-size: rem(48);
+		}
+		@media (max-width: em($md4)) {
+			font-size: rem(40);
+		}
+	}
+	// .achievements-item__text
+	&__text {
+		font-size: rem(21);
+		line-height: 166.667%;
+	}
+}
+
+//===============================================================
+.main-video {
+	position: relative;
+	height: rem(680);
+	@media (max-width: em($md2)) {
+		height: rem(550);
+	}
+	@media (max-width: em($md3)) {
+		height: rem(420);
+	}
+	@media (max-width: em($md4)) {
+		height: rem(290);
+	}
+	// .main-video__container
+	&__container {
+		height: 100%;
+	}
+	// .main-video__body
+	&__body {
+		height: 100%;
+		display: grid;
+		align-content: center;
+		justify-content: start;
+		gap: rem(50);
+	}
+	// .main-video__title
+	&__title {
+		color: #fff !important;
+	}
+	// .main-video__actions
+	&__actions {
+	}
+	// .main-video__link
+	&__link {
+		color: #fff;
+		height: rem(52);
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		font-size: rem(14);
+		font-weight: 500;
+		text-transform: uppercase;
+		border: rem(1) solid #fff;
+		transition: all 0.3s ease 0s;
+		padding: rem(10) rem(33);
+		@media (any-hover: hover) {
+			&:hover {
+				color: #000;
+				border: rem(1) solid #000;
+				background: #fff;
+			}
+		}
+	}
+	// .main-video__bg
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+}
+
+//===============================================================
+.ads {
+	padding: rem(90) 0px;
+	@media (max-width: em($md2)) {
+		padding: rem(60) 0px;
+	}
+	@media (max-width: em($md3)) {
+		padding: rem(30) 0px;
+	}
+	// .ads__container
+	&__container {
+	}
+	// .ads__head
+	&__head {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: rem(15) rem(30);
+		align-items: center;
+		margin: 0px 0px rem(60) 0px;
+		@media (max-width: em($md2)) {
+			margin: 0px 0px rem(40) 0px;
+		}
+		@media (max-width: em($md3)) {
+			margin: 0px 0px rem(20) 0px;
+		}
+	}
+	// .ads__title
+	&__title {
+	}
+	// .ads__more
+	&__more {
+		display: inline-flex;
+		white-space: nowrap;
+		align-items: center;
+		gap: rem(15);
+		font-size: rem(21);
+		line-height: 1;
+	}
+	// .ads__body
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: rem(30);
+		@media (max-width: em($md0)) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: em($md2)) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	// .ads__item
+	&__item {
+	}
+}
+
+//---------------------------------------------------------------
+.ads-item {
+	padding: rem(30);
+	background: #f6f6f6;
+	display: flex;
+	flex-direction: column;
+	gap: rem(40);
+	// .ads-item__text
+	&__text {
+		font-size: rem(21);
+		line-height: 142.857%;
+		flex: 1 1 auto;
+	}
+	// .ads-item__action
+	&__action {
+		font-size: rem(19);
+		font-weight: 500;
+		white-space: nowrap;
+		display: inline-flex;
+		align-items: center;
+		gap: rem(30);
+		svg {
+			color: var(--color-main);
+		}
+	}
+}
