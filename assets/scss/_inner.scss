@@ -1,0 +1,110 @@
+.inner-head {
+	position: relative;
+	margin: 0px 0px rem(90) 0px;
+	@media (max-width: em($md3)) {
+		margin: 0px 0px rem(60) 0px;
+	}
+	// .inner-head__container
+	&__container {
+	}
+	// .inner-head__body
+	&__body {
+		display: grid;
+		gap: rem(30);
+		justify-items: center;
+		align-content: center;
+		height: rem(284);
+	}
+	// .inner-head__title
+	&__title {
+		color: #fff !important;
+	}
+	// .inner-head__bg
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%);
+		}
+	}
+}
+
+//===============================================================
+.rubricator {
+	margin: 0px 0px rem(180) 0px;
+	@media (max-width: em($md2)) {
+		margin: 0px 0px rem(100) 0px;
+	}
+	@media (max-width: em($md3)) {
+		margin: 0px 0px rem(80) 0px;
+	}
+	@media (max-width: em($md4)) {
+		margin: 0px 0px rem(60) 0px;
+	}
+	// .rubricator__container
+	&__container {
+	}
+	// .rubricator__body
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: rem(30);
+	}
+	// .rubricator__item
+	&__item {
+	}
+}
+
+//---------------------------------------------------------------
+.rubricator-item {
+	min-height: rem(237);
+	padding: rem(30) rem(25);
+	display: flex;
+	flex-direction: column;
+	background: #f5f5f5;
+	transition: all 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			background: var(--color-main);
+		}
+	}
+	// .rubricator-item__img
+	&__img {
+		height: rem(77);
+		margin: 0px 0px rem(30) 0px;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		color: var(--color-main);
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			.rubricator-item:hover & {
+				color: #fff;
+			}
+		}
+	}
+	// .rubricator-item__title
+	&__title {
+		text-align: center;
+		font-weight: 500;
+		flex: 1 1 auto;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			.rubricator-item:hover & {
+				color: #fff !important;
+			}
+		}
+	}
+}
+
+//===============================================================

@@ -7,14 +7,18 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	font-size: rem(16);
+	font-size: rem(17);
 	line-height: 1;
-	padding: em(8) em(22);
-	height: em(40);
+	padding: rem(10) rem(33);
+	height: rem(51);
 	background: var(--color-main);
 	color: #ffffff !important;
-	border-radius: em(4);
-	transition: background-color 0.3s, color 0.3s, box-shadow 0.1s;
+	border-radius: rem(999);
+	border: rem(1) solid var(--color-main);
+	transition:
+		background-color 0.3s,
+		color 0.3s,
+		box-shadow 0.1s;
 	@media (any-hover: hover) {
 		&:hover {
 			background: var(--color-main-dark);
@@ -32,12 +36,16 @@
 	&_long {
 		min-width: em(200);
 	}
+	// .btn_trans
+	&_trans {
+		background: transparent;
+		border: rem(1) solid #fff;
+	}
 
 	&:focus {
 		box-shadow: 0 0 0 1px var(--color-focus);
 	}
 }
-
 
 //===============================================================
 /**
@@ -48,13 +56,12 @@
 	display: none;
 }
 
-input[type=text],
-input[type=email],
-input[type=tel],
+input[type="text"],
+input[type="email"],
+input[type="tel"],
 textarea {
 	appearance: none;
 }
-
 
 //===============================================================
 /**
@@ -63,14 +70,13 @@ textarea {
 .input {
 	display: block;
 	width: 100%;
-	font-size: rem(16);
+	font-size: rem(17);
 	line-height: prc(20, 16);
-	padding: em(10) em(12);
-	height: em(43, 16);
+	padding: rem(10) rem(12);
+	height: rem(49);
 	color: #000000;
 	background: #ffffff;
-	border: rem(1) solid #cccccc;
-	border-radius: rem(4);
+	border: rem(1) solid var(--color-main);
 	transition: border 0.3s ease 0s;
 	&:focus {
 		border: rem(1) solid var(--color-focus);
@@ -96,17 +102,15 @@ textarea {
 	}
 }
 
-
 //===============================================================
 /**
  * Область текста
  */
 textarea.input {
 	resize: none;
-	padding: em(10);
-	min-height: em(60);
+	padding: rem(13) rem(23);
+	min-height: rem(126);
 }
-
 
 //===============================================================
 /**
@@ -122,7 +126,7 @@ textarea.input {
 	background: #ffffff;
 	border: rem(1) solid #cccccc;
 	border-radius: rem(4);
-	@media (max-width: ($md4+'px')) {
+	@media (max-width: ($md4+"px")) {
 		flex-direction: column-reverse;
 	}
 	&._error {
@@ -195,7 +199,6 @@ textarea.input {
 	}
 }
 
-
 //===============================================================
 /**
  * Чекбоксы
@@ -206,30 +209,32 @@ textarea.input {
 
 	// .check__mark
 	&__mark {
+		display: inline-block;
 	}
 
 	// .check_default
 	&_default {
-		padding: 0px 0px 0px rem(30);
+		display: inline-block;
+		padding: 0px rem(35) 0px 0px;
+		translate: rem(35) 0;
 		.check__mark {
 			position: relative;
 			&::before {
-				content: '';
+				content: "";
 				position: absolute;
 				top: em(-2);
-				left: em(-30);
-				width: em(20);
-				height: em(20);
-				background: #ffffff;
-				border: rem(1) solid #cccccc;
-				border-radius: rem(4);
+				left: em(-35);
+				width: em(24);
+				height: em(24);
+				transition: all 0.3s ease 0s;
+				border: rem(1) solid #fff;
 				transition: all 0.3s ease 0s;
 			}
 			&::after {
-				content: '';
+				content: "";
 				position: absolute;
-				top: em(0);
-				left: em(-23);
+				top: em(1);
+				left: em(-26);
 				width: em(7);
 				height: em(12);
 				border-width: 0 em(2) em(2) 0;
@@ -243,7 +248,6 @@ textarea.input {
 		&._checked {
 			.check__mark::before {
 				background: var(--color-main);
-				border: rem(1) solid var(--color-main);
 			}
 			.check__mark::after {
 				opacity: 1;
@@ -273,7 +277,6 @@ textarea.input {
 	}
 }
 
-
 //===============================================================
 /**
  * Радиокнопки
@@ -292,7 +295,7 @@ textarea.input {
 		.radio__mark {
 			position: relative;
 			&::before {
-				content: '';
+				content: "";
 				position: absolute;
 				top: em(-2);
 				left: em(-30);
@@ -304,7 +307,7 @@ textarea.input {
 				transition: all 0.3s ease 0s;
 			}
 			&::after {
-				content: '';
+				content: "";
 				position: absolute;
 				top: em(2);
 				left: em(-26);
@@ -346,7 +349,6 @@ textarea.input {
 	}
 }
 
-
 //===============================================================
 /**
  * Числовой инпут с кастомными кнопками
@@ -379,7 +381,7 @@ textarea.input {
 			width: em(9);
 			height: 1px;
 		}
-		@media (min-width: ($md2+1+'px')) {
+		@media (min-width: ($md2+1+"px")) {
 			&:hover {
 				&::before,
 				&::after {
@@ -405,7 +407,7 @@ textarea.input {
 			color: #888888;
 			width: 100%;
 			text-align: center;
-			appearance: 'textfield';
+			appearance: "textfield";
 			&::-webkit-outer-spin-button,
 			&::-webkit-inner-spin-button {
 				appearance: none;
@@ -417,7 +419,6 @@ textarea.input {
 		}
 	}
 }
-
 
 //===============================================================
 /**
@@ -442,7 +443,6 @@ textarea.input {
 	&__labels {
 	}
 }
-
 
 //===============================================================
 /**
@@ -536,3 +536,120 @@ textarea.input {
 	}
 }
 
+//===============================================================
+.form-section {
+	background: var(--color-main);
+	padding: rem(90) 0px;
+	@media (max-width: em($md2)) {
+		padding: rem(60) 0px;
+	}
+	@media (max-width: em($md3)) {
+		padding: rem(30) 0px;
+	}
+	// .form-section__container
+	&__container {
+	}
+	// .form-section__head
+	&__head {
+		margin: 0px 0px rem(60) 0px;
+		@media (max-width: em($md2)) {
+			margin: 0px 0px rem(40) 0px;
+		}
+		@media (max-width: em($md3)) {
+			margin: 0px 0px rem(30) 0px;
+		}
+	}
+	// .form-section__title
+	&__title {
+		color: #fff !important;
+		font-weight: 700;
+		margin: 0px 0px rem(3) 0px;
+	}
+	// .form-section__label
+	&__label {
+		color: #fff;
+		font-size: rem(21);
+		font-style: normal;
+		font-weight: 400;
+		line-height: 166.667%;
+	}
+}
+
+//---------------------------------------------------------------
+.main-form {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: rem(15) rem(90);
+	@media (max-width: em($md2)) {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	// .main-form__column
+	&__column {
+		// .main-form__column_left
+		&_left {
+			display: grid;
+			gap: rem(30);
+			@media (max-width: em($md2)) {
+				gap: rem(15);
+			}
+		}
+		// .main-form__column_right
+		&_right {
+		}
+	}
+	// .main-form__input
+	&__input {
+		background: transparent;
+		border: rem(1) solid #fff;
+		color: #fff;
+		&::-webkit-input-placeholder {
+			color: #fff;
+			opacity: 1;
+		}
+		&::-moz-placeholder {
+			color: #fff;
+			opacity: 1;
+		}
+		&:-ms-input-placeholder {
+			color: #fff;
+			opacity: 1;
+		}
+		&::placeholder {
+			color: #fff;
+			opacity: 1;
+		}
+	}
+	// .main-form__tar
+	&__tar {
+		margin: 0px 0px rem(26) 0px;
+		background: transparent;
+		border: rem(1) solid #fff;
+		color: #fff;
+		&::-webkit-input-placeholder {
+			color: #fff;
+			opacity: 1;
+		}
+		&::-moz-placeholder {
+			color: #fff;
+			opacity: 1;
+		}
+		&:-ms-input-placeholder {
+			color: #fff;
+			opacity: 1;
+		}
+		&::placeholder {
+			color: #fff;
+			opacity: 1;
+		}
+	}
+	// .main-form__check
+	&__check {
+		.check__mark {
+			margin-bottom: rem(40);
+		}
+		color: #fff !important;
+	}
+	// .main-form__btn
+	&__btn {
+	}
+}

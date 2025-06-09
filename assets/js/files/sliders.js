@@ -69,6 +69,32 @@ function getMainSliderBullet(index) {
 }
 
 //===============================================================
+const partnersSlider = new Swiper(".partners-slider", {
+	slidesPerView: "auto",
+	spaceBetween: 30,
+	speed: 800,
+	loop: true,
+	navigation: {
+		disabledClass: "_disabled",
+		prevEl: ".partners__arrow_prev",
+		nextEl: ".partners__arrow_next",
+	},
+});
+
+//===============================================================
+const resourcesSlider = new Swiper(".resources-slider", {
+	slidesPerView: "auto",
+	spaceBetween: 30,
+	speed: 800,
+	loop: true,
+	navigation: {
+		disabledClass: "_disabled",
+		prevEl: ".resources__arrow_prev",
+		nextEl: ".resources__arrow_next",
+	},
+});
+
+//===============================================================
 
 /**
  * Инициализация слайдера

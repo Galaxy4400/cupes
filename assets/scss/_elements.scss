@@ -69,9 +69,9 @@
  * Стили иконки меню
  */
 .menu-icon {
-	display: none;
+	display: none !important;
 	@media (max-width: em($md2)) {
-		display: block;
+		display: block !important;
 		position: relative;
 		width: rem(24);
 		height: rem(18);
@@ -123,9 +123,9 @@
 		display: flex;
 		align-items: center;
 		&:not(:last-child)::after {
-			content: "»";
-			margin: 0px rem(10);
-			color: #000;
+			content: "-";
+			margin: 0px rem(20);
+			color: #fff;
 			font-weight: 500;
 		}
 	}
@@ -135,13 +135,14 @@
 		overflow: hidden;
 		white-space: nowrap;
 		max-width: 250px;
+		font-size: rem(17);
 		text-overflow: ellipsis;
 		color: inherit;
 		transition: all 0.3s ease 0s;
-		color: #000;
+		color: #fff;
 		@media (any-hover: hover) {
 			&:hover {
-				color: var(--color-green);
+				color: var(--color-main);
 			}
 		}
 	}
@@ -152,7 +153,8 @@
 		white-space: nowrap;
 		max-width: 250px;
 		text-overflow: ellipsis;
-		color: #000;
+		color: #fff;
+		font-size: rem(17);
 	}
 }
 
@@ -239,5 +241,38 @@
 			transform: translate(calc(-50% - rem(3)), -50%) rotate(-45deg);
 		}
 		transform: translate(calc(-50% - rem(6.5)), -50%) rotate(-45deg);
+	}
+}
+
+//===============================================================
+.more {
+	display: inline-flex;
+	white-space: nowrap;
+	align-items: center;
+	gap: rem(15);
+	font-size: rem(21);
+	line-height: 1;
+}
+
+//===============================================================
+.title-wrapper {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		height: rem(1);
+		background: var(--color-background);
+		z-index: -1;
+	}
+	// .title-wrapper__title
+	&__title {
+		text-align: center;
+		background: var(--color-body-background);
+		padding: 0px rem(25);
 	}
 }
