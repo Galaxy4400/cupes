@@ -144,18 +144,26 @@
 				<div class="page-inner__container _container">
 					<div class="page-inner__body page-inner__body_has-asside">
 						<div class="page-inner__asside">
-							<nav class="submenu">
-								<ul class="submenu__list">
-									<li class="submenu__item"><a class="submenu__link _active" href="#">Общая информация</a></li>
-									<li class="submenu__item"><a class="submenu__link" href="#">Полномочия центра</a></li>
-									<li class="submenu__item"><a class="submenu__link" href="#">Руководство</a></li>
-									<li class="submenu__item"><a class="submenu__link" href="#">Положение</a></li>
-									<li class="submenu__item"><a class="submenu__link" href="#">История центра</a></li>
-									<li class="submenu__item"><a class="submenu__link" href="#">Вакансии</a></li>
-									<li class="submenu__item"><a class="submenu__link" href="#">Противодействие корупции</a></li>
-									<li class="submenu__item"><a class="submenu__link" href="#">Гендерный вопрос</a></li>
-								</ul>
-							</nav>
+							<div class="submenu-spoiler" data-spoiler="submenu-spoiler">
+								<div class="submenu-spoiler__item" data-spoiler-item>
+									<button class="submenu-spoiler__control btn" type="button" data-spoiler-control>Меню</button>
+									<div class="submenu-spoiler__container" data-spoiler-container>
+										<nav class="submenu">
+											<ul class="submenu__list">
+												<li class="submenu__item"><a class="submenu__link _active" href="#">Общая информация</a></li>
+												<li class="submenu__item"><a class="submenu__link" href="#">Полномочия центра</a></li>
+												<li class="submenu__item"><a class="submenu__link" href="#">Руководство</a></li>
+												<li class="submenu__item"><a class="submenu__link" href="#">Положение</a></li>
+												<li class="submenu__item"><a class="submenu__link" href="#">История центра</a></li>
+												<li class="submenu__item"><a class="submenu__link" href="#">Вакансии</a></li>
+												<li class="submenu__item"><a class="submenu__link" href="#">Противодействие корупции</a></li>
+												<li class="submenu__item"><a class="submenu__link" href="#">Гендерный вопрос</a></li>
+											</ul>
+										</nav>
+
+									</div>
+								</div>
+							</div>
 							<a class="more" href="#">
 								<svg xmlns="http://www.w3.org/2000/svg" width="27" height="9" viewBox="0 0 27 9" fill="none">
 									<path d="M0 4.5L9 0V3.8584H27V5.1416H9V9L0 4.5Z" fill="currentColor" />
@@ -246,7 +254,80 @@
 								</div>
 							</div>
 							<div class="page-inner__gallery inner-gallery">
-								gallery gallery gallery gallery gallery gallery gallery gallery gallery
+								<div class="inner-gallery__left">
+									<div class="inner-gallery__thumbs inner-gallery-thumbs" data-swiper>
+										<div class="inner-gallery-thumbs__slides">
+											<div class="inner-gallery-thumbs__slide thumbs-slide">
+												<figure class="thumbs-slide__img _ibg">
+													<img src="https://i.pinimg.com/originals/62/0e/93/620e9365bc448bfa1838f1ce27b14351.jpg" alt="img">
+												</figure>
+											</div>
+											<div class="inner-gallery-thumbs__slide thumbs-slide">
+												<figure class="thumbs-slide__img _ibg">
+													<img src="https://i.pinimg.com/originals/62/0e/93/620e9365bc448bfa1838f1ce27b14351.jpg" alt="img">
+												</figure>
+											</div>
+											<div class="inner-gallery-thumbs__slide thumbs-slide">
+												<figure class="thumbs-slide__img _ibg">
+													<img src="https://i.pinimg.com/originals/62/0e/93/620e9365bc448bfa1838f1ce27b14351.jpg" alt="img">
+												</figure>
+											</div>
+											<div class="inner-gallery-thumbs__slide thumbs-slide">
+												<figure class="thumbs-slide__img _ibg">
+													<img src="https://i.pinimg.com/originals/62/0e/93/620e9365bc448bfa1838f1ce27b14351.jpg" alt="img">
+												</figure>
+											</div>
+											<div class="inner-gallery-thumbs__slide thumbs-slide">
+												<figure class="thumbs-slide__img _ibg">
+													<img src="https://i.pinimg.com/originals/62/0e/93/620e9365bc448bfa1838f1ce27b14351.jpg" alt="img">
+												</figure>
+											</div>
+										</div>
+										<div class="inner-gallery-thumbs__arrows">
+											<div class="inner-gallery-thumbs__arrow inner-gallery-thumbs__arrow_prev">
+												<svg xmlns="http://www.w3.org/2000/svg" width="23" height="13" viewBox="0 0 23 13" fill="none">
+													<path d="M1.5 11.5945L11.5 1.59448L21.5 11.5945" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+											</div>
+											<div class="inner-gallery-thumbs__arrow inner-gallery-thumbs__arrow_next">
+												<svg xmlns="http://www.w3.org/2000/svg" width="23" height="13" viewBox="0 0 23 13" fill="none">
+													<path d="M1.5 1.80542L11.5 11.8054L21.5 1.80542" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="inner-gallery__right">
+									<div class="inner-gallery__slider inner-gallery-slider" data-swiper>
+										<div class="inner-gallery-slider__slides">
+											<div class="inner-gallery-slider__slide gallery-slide">
+												<figure class="gallery-slide__img _ibg">
+													<img src="https://i.pinimg.com/originals/62/0e/93/620e9365bc448bfa1838f1ce27b14351.jpg" alt="img">
+												</figure>
+											</div>
+											<div class="inner-gallery-slider__slide gallery-slide">
+												<figure class="gallery-slide__img _ibg">
+													<img src="https://i.pinimg.com/originals/62/0e/93/620e9365bc448bfa1838f1ce27b14351.jpg" alt="img">
+												</figure>
+											</div>
+											<div class="inner-gallery-slider__slide gallery-slide">
+												<figure class="gallery-slide__img _ibg">
+													<img src="https://i.pinimg.com/originals/62/0e/93/620e9365bc448bfa1838f1ce27b14351.jpg" alt="img">
+												</figure>
+											</div>
+											<div class="inner-gallery-slider__slide gallery-slide">
+												<figure class="gallery-slide__img _ibg">
+													<img src="https://i.pinimg.com/originals/62/0e/93/620e9365bc448bfa1838f1ce27b14351.jpg" alt="img">
+												</figure>
+											</div>
+											<div class="inner-gallery-slider__slide gallery-slide">
+												<figure class="gallery-slide__img _ibg">
+													<img src="https://i.pinimg.com/originals/62/0e/93/620e9365bc448bfa1838f1ce27b14351.jpg" alt="img">
+												</figure>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="page-inner__text _typography">
 								<p>Центр играет ключевую роль в реализации стратегических инициатив в области электроэнергетики, направленных на модернизацию инфраструктуры, повышение энергетической эффективности и обеспечение устойчивого развития сектора. Его деятельность охватывает широкий спектр задач, включая разработку проектной документации, анализ рисков, а также осуществление постоянного мониторинга и оценки эффективности реализуемых проектов.</p>

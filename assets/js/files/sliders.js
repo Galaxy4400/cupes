@@ -95,6 +95,29 @@ const resourcesSlider = new Swiper(".resources-slider", {
 });
 
 //===============================================================
+const innerGalleryThumbs = new Swiper(".inner-gallery-thumbs", {
+	slidesPerView: "auto",
+	spaceBetween: 20,
+	speed: 800,
+	direction: "vertical",
+	mousewheel: true,
+	navigation: {
+		disabledClass: "_disabled",
+		prevEl: ".inner-gallery-thumbs__arrow_prev",
+		nextEl: ".inner-gallery-thumbs__arrow_next",
+	},
+});
+
+const innerGallerySlider = new Swiper(".inner-gallery-slider", {
+	slidesPerView: 1,
+	spaceBetween: 30,
+	speed: 800,
+	thumbs: {
+		swiper: innerGalleryThumbs,
+	},
+});
+
+//===============================================================
 
 /**
  * Инициализация слайдера
