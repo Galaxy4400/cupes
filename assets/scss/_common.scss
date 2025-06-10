@@ -149,7 +149,11 @@ body {
 	}
 
 	//---------------------------------------------------------------
-	._special-styles {
+	._typography {
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+
 		h1,
 		h2,
 		h3,
@@ -160,8 +164,10 @@ body {
 		}
 
 		a {
+			font-size: rem(21);
 			transition: all 0.3s ease 0s;
-			color: var(--color-link);
+			color: var(--color-main);
+			font-weight: 500;
 			@media (any-hover: hover) {
 				&:hover {
 					color: var(--color-main-dark);
@@ -171,6 +177,8 @@ body {
 
 		p {
 			margin: 0px 0px rem(20) 0px;
+			font-size: rem(21);
+			line-height: 166.667%;
 		}
 
 		figure {
@@ -183,11 +191,12 @@ body {
 
 		ul {
 			padding: 0px 0px 0px rem(22);
-			margin: 0px 0px rem(10) 0px;
+			margin: 0px 0px rem(20) 0px;
 			li {
 				position: relative;
 				line-height: 150%;
 				margin: 0px 0px rem(10) 0px;
+				font-size: rem(21);
 				& > ul,
 				& > ol {
 					padding-top: rem(10);
@@ -196,10 +205,10 @@ body {
 					content: "";
 					position: absolute;
 					top: em(9);
-					left: em(-18);
-					width: em(6);
-					height: em(6);
-					background: var(--color-main-dark);
+					left: em(-12);
+					width: em(4);
+					height: em(4);
+					background: #000;
 					border-radius: 50%;
 				}
 			}
@@ -219,6 +228,7 @@ body {
 		}
 
 		table {
+			width: 100%;
 			max-width: 100%;
 			border-collapse: collapse;
 			margin: 0px 0px rem(40) 0px;
@@ -227,17 +237,22 @@ body {
 			}
 			tr {
 				th {
-					font-size: rem(16);
-					font-weight: 400;
-					background: #111111;
-					padding: rem(5) rem(10);
-					border: 1px solid #000000;
-					color: #ffffff;
+					font-size: rem(21);
+					font-weight: 500;
+					background: var(--color-background);
+					padding: rem(10) rem(12);
+					border: rem(1) solid #5b5b5b;
+					color: #000;
+					line-height: 166.667%;
 				}
 				td {
-					background: #dddddd;
-					border: 1px solid #000000;
+					text-align: center;
+					font-size: rem(21);
 					padding: rem(5) rem(10);
+					border: rem(1) solid #5b5b5b;
+					color: #000;
+					line-height: 166.667%;
+					padding: rem(10) rem(12);
 				}
 			}
 		}

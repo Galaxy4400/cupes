@@ -84,13 +84,17 @@
 			position: absolute;
 			width: 100%;
 			height: rem(2);
-			background-color: #fff;
+			background-color: #000;
 			&:first-child {
 				top: 0px;
 			}
 			&:last-child {
 				top: auto;
 				bottom: 0px;
+			}
+
+			.wrapper_index & {
+				background-color: #fff;
 			}
 		}
 		&._active {
@@ -274,5 +278,21 @@
 		text-align: center;
 		background: var(--color-body-background);
 		padding: 0px rem(25);
+	}
+}
+
+//===============================================================
+.dock {
+	display: flex;
+	align-items: center;
+	gap: rem(15);
+	font-size: rem(21);
+	@media (any-hover: hover) {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	svg {
+		color: var(--color-main);
 	}
 }

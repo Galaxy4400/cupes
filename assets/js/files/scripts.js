@@ -5,3 +5,5 @@ new Adapt();
 const modal = new Modal({ animation: "fadeIn" });
 
 new Menu("main-menu");
+
+new Tabs("inner-tabs");
