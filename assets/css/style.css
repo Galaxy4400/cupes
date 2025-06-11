@@ -6101,7 +6101,7 @@ body h3 {
   body .h3,
   body h3 a,
   body h3 {
-    font-size: 1.375rem;
+    font-size: 2rem;
   }
 }
 @media (max-width: 29.9375em) {
@@ -8414,6 +8414,12 @@ textarea.input {
 .page-inner__title {
   margin: 0px 0px 1.875rem 0px;
 }
+.page-inner__title_special {
+  text-align: center;
+  padding: 0px 0px 1.875rem 0px;
+  border-bottom: 0.0625rem solid var(--color-background);
+  margin: 0px 0px 3.75rem 0px;
+}
 .page-inner__text {
   margin: 0px 0px 1.875rem 0px;
 }
@@ -8429,6 +8435,9 @@ textarea.input {
   margin: 0px 0px 3.75rem 0px;
   display: grid;
   gap: 0.9375rem;
+}
+.page-inner__docs h4 {
+  margin: 0px 0px 1.25rem 0px;
 }
 @media (max-width: 47.9375em) {
   .page-inner__docs {
@@ -8450,6 +8459,14 @@ textarea.input {
   .page-inner__gallery {
     margin: 0px 0px 1.875rem 0px;
   }
+}
+.page-inner__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.25rem 2.5rem;
 }
 
 .submenu-spoiler__control {
@@ -8881,6 +8898,50 @@ textarea.input {
   font-size: 1.3125rem;
 }
 
+.tenders-head__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.9375rem 3.125rem;
+  margin: 0px 0px 1.875rem 0px;
+}
+@media (max-width: 47.9375em) {
+  .tenders-head__top {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0px 0px 1.25rem 0px;
+  }
+}
+.tenders-head__time {
+  white-space: nowrap;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3.125rem;
+  padding: 0.3125rem 0.625rem;
+  background: var(--color-main);
+  color: #fff;
+  font-size: 1.0625rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+@media (max-width: 47.9375em) {
+  .tenders-head__time {
+    height: 2.5rem;
+  }
+}
 .tenders-head__footer {
   margin-top: 5.625rem;
   border-top: 0.0625rem solid var(--color-background);
