@@ -618,8 +618,9 @@
 	}
 	// .news-item__title
 	&__title {
-		margin: 0px 0px rem(20) 0px;
+		font-size: rem(21);
 		line-height: 166.667%;
+		margin: 0px 0px rem(20) 0px;
 	}
 	// .news-item__info
 	&__info {

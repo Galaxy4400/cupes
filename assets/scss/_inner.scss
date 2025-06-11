@@ -234,6 +234,8 @@
 	}
 	// .rubricator-item__title
 	&__title {
+		font-size: rem(21);
+		line-height: 166.667%;
 		text-align: center;
 		font-weight: 500;
 		flex: 1 1 auto;
@@ -512,6 +514,24 @@
 		@media (max-width: em($md3)) {
 			gap: rem(30);
 		}
+
+		// .tender-item__body_big
+		&_big {
+			grid-template-columns: 1fr auto auto;
+			gap: rem(30) rem(147);
+			@media (max-width: em($md0)) {
+				gap: rem(30);
+			}
+			@media (max-width: em($md2)) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+			@media (max-width: em($md3)) {
+				gap: rem(30);
+			}
+			@media (max-width: em($md4)) {
+				grid-template-columns: repeat(1, 1fr);
+			}
+		}
 	}
 	// .tender-item__cell
 	&__cell {
@@ -531,3 +551,24 @@
 }
 
 //===============================================================
+.tenders-head {
+	// .tenders-head__top
+	&__top {
+	}
+	// .tenders-head__time
+	&__time {
+	}
+	// .tenders-head__footer
+	&__footer {
+		margin-top: rem(90);
+		border-top: rem(1) solid var(--color-background);
+		padding: rem(30) 0px;
+	}
+	// .tenders-head__actions
+	&__actions {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: rem(40);
+	}
+}
