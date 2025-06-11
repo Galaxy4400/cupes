@@ -8782,3 +8782,53 @@ textarea.input {
 .management-item__text {
   font-size: 1.3125rem;
 }
+
+.tenders-table {
+  padding: 1.875rem 0px 0px 0px;
+  display: grid;
+  gap: 3.75rem;
+}
+.tender-item {
+  display: grid;
+  gap: 1.875rem;
+}
+.tender-item__title {
+  display: inline-block;
+  position: relative;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0px 0px 0.9375rem 0px;
+  justify-self: start;
+}
+.tender-item__title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.125rem;
+  background: var(--color-main);
+}
+.tender-item__body {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.875rem 12.5rem;
+}
+@media (max-width: 47.9375em) {
+  .tender-item__body {
+    gap: 1.875rem;
+  }
+}
+.tender-item__cell {
+  display: grid;
+  gap: 0.9375rem;
+}
+.tender-item__prop {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.tender-item__val {
+  font-size: 1.3125rem;
+}

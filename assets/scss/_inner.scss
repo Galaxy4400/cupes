@@ -472,3 +472,62 @@
 }
 
 //===============================================================
+.tenders-table {
+	padding: rem(30) 0px 0px 0px;
+	display: grid;
+	gap: rem(60);
+	// .tenders-table__item
+	&__item {
+	}
+}
+
+//---------------------------------------------------------------
+.tender-item {
+	display: grid;
+	gap: rem(30);
+	// .tender-item__title
+	&__title {
+		display: inline-block;
+		position: relative;
+		font-size: rem(20);
+		font-weight: 500;
+		text-transform: uppercase;
+		padding: 0px 0px rem(15) 0px;
+		justify-self: start;
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: rem(2);
+			background: var(--color-main);
+		}
+	}
+	// .tender-item__body
+	&__body {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: rem(30) rem(200);
+		@media (max-width: em($md3)) {
+			gap: rem(30);
+		}
+	}
+	// .tender-item__cell
+	&__cell {
+		display: grid;
+		gap: rem(15);
+	}
+	// .tender-item__prop
+	&__prop {
+		font-size: rem(17);
+		font-weight: 500;
+		text-transform: uppercase;
+	}
+	// .tender-item__val
+	&__val {
+		font-size: rem(21);
+	}
+}
+
+//===============================================================
