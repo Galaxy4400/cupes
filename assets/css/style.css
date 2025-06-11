@@ -8476,7 +8476,17 @@ textarea.input {
   justify-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  height: 17.75rem;
+  min-height: 17.75rem;
+}
+@media (max-width: 61.9375em) {
+  .inner-head__body {
+    min-height: 15rem;
+  }
+}
+@media (max-width: 47.9375em) {
+  .inner-head__body {
+    min-height: 12.5rem;
+  }
 }
 .inner-head__title {
   color: #fff !important;
@@ -8733,4 +8743,42 @@ textarea.input {
   height: 100%;
   top: 0;
   left: 0;
+}
+
+.management {
+  display: grid;
+  gap: 1.25rem;
+}
+.management-item {
+  display: grid;
+  grid-template-columns: 9.375rem 1fr;
+  gap: 1.875rem;
+}
+.management-item__right {
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.management-item__content {
+  display: grid;
+  gap: 1.25rem;
+}
+.management-item__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+@media (max-width: 61.9375em) {
+  .management-item__title {
+    font-size: 1.375rem;
+  }
+}
+@media (max-width: 47.9375em) {
+  .management-item__title {
+    font-size: 1.3125rem;
+  }
+}
+.management-item__text {
+  font-size: 1.3125rem;
 }
