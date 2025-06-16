@@ -7462,6 +7462,9 @@ textarea.input {
 }
 @media (max-width: 61.9375em) {
   .menu__sub-list {
+    background: transparent;
+  }
+  .menu__body._active .menu__sub-list {
     position: relative;
     opacity: 1;
     visibility: visible;

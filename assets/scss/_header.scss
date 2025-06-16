@@ -189,9 +189,12 @@
 		}
 
 		@media (max-width: em($md2)) {
-			position: relative;
-			opacity: 1;
-			visibility: visible;
+			background: transparent;
+			.menu__body._active & {
+				position: relative;
+				opacity: 1;
+				visibility: visible;
+			}
 		}
 
 		.wrapper_index & {
