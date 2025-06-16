@@ -154,8 +154,8 @@
 	&__current {
 		display: inline-block;
 		overflow: hidden;
-		white-space: nowrap;
-		max-width: 250px;
+		// white-space: nowrap;
+		// max-width: 250px;
 		text-overflow: ellipsis;
 		color: #fff;
 		font-size: rem(17);

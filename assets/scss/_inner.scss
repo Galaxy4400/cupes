@@ -56,6 +56,23 @@
 	&__title {
 		margin: 0px 0px rem(30) 0px;
 	}
+	// .page-inner__info
+	&__info {
+		margin: 0px 0px rem(30) 0px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: rem(30);
+	}
+	// .page-inner__date
+	&__date {
+		font-size: rem(17);
+	}
+	// .page-inner__view
+	&__view {
+		font-size: rem(17);
+		display: flex;
+		gap: rem(15);
+	}
 	// .page-inner__text
 	&__text {
 		margin: 0px 0px rem(30) 0px;

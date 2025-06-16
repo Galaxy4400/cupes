@@ -59,10 +59,36 @@
 }
 
 .menu {
+	// .menu__close
+	&__close {
+		display: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		@media (max-width: em($md2)) {
+			display: block;
+		}
+	}
 	// .menu__body
 	&__body {
 		@media (max-width: em($md2)) {
-			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100vh;
+			background: #fff;
+			z-index: 50;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s ease 0s;
+			overflow-x: hidden;
+			overflow-y: auto;
+			padding: rem(50) rem(0) rem(300);
+			&._active {
+				opacity: 1;
+				visibility: visible;
+			}
 		}
 	}
 	// .menu__list
@@ -72,12 +98,20 @@
 		@media (max-width: em(1300)) {
 			gap: rem(0);
 		}
+		@media (max-width: em($md2)) {
+			flex-direction: column;
+			align-items: start;
+		}
 	}
 	// .menu__item
 	&__item {
 		position: relative;
 		display: flex;
 		align-items: center;
+		@media (max-width: em($md2)) {
+			flex-direction: column;
+			align-items: start;
+		}
 	}
 	// .menu__link
 	&__link {
@@ -99,6 +133,10 @@
 		@media (max-width: em(1120)) {
 			font-size: rem(16);
 		}
+		@media (max-width: em($md2)) {
+			font-size: rem(26);
+			padding: rem(16);
+		}
 
 		.wrapper_index & {
 			color: #fff;
@@ -108,6 +146,10 @@
 					opacity: 0.7;
 				}
 			}
+
+			@media (max-width: em($md2)) {
+				color: #000;
+			}
 		}
 	}
 	// .menu__arrow
@@ -116,6 +158,10 @@
 		color: #000;
 		@media (max-width: em($md1)) {
 			padding: rem(8) rem(8) rem(8) rem(8);
+		}
+
+		@media (max-width: em($md2)) {
+			display: none;
 		}
 
 		.wrapper_index & {
@@ -142,6 +188,12 @@
 		&_level-1 {
 		}
 
+		@media (max-width: em($md2)) {
+			position: relative;
+			opacity: 1;
+			visibility: visible;
+		}
+
 		.wrapper_index & {
 			background: rgba(255, 255, 255, 0.3);
 		}
@@ -153,6 +205,11 @@
 	&__sub-link {
 		color: #fff;
 		font-weight: 500;
+
+		@media (max-width: em($md2)) {
+			color: #000;
+		}
+
 		@media (any-hover: hover) {
 			&:hover {
 				color: #000;
