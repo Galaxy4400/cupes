@@ -165,6 +165,7 @@
 //===============================================================
 .inner-head {
 	position: relative;
+	z-index: 5;
 	margin: 0px 0px rem(90) 0px;
 	@media (max-width: em($md3)) {
 		margin: 0px 0px rem(60) 0px;

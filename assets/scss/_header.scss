@@ -1,12 +1,15 @@
 .header {
+	position: relative;
+	z-index: 10;
 	padding: rem(60) 0px rem(35);
+	background: #fff;
 	.wrapper_index & {
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
-		z-index: 10;
 		padding: rem(20) 0px;
+		background: transparent;
 	}
 	// .header__container
 	&__container {

@@ -6804,6 +6804,8 @@ textarea.input {
   color: var(--color-error);
 }
 .form-section {
+  position: relative;
+  z-index: 5;
   background: var(--color-main);
   padding: 5.625rem 0px;
 }
@@ -7248,16 +7250,80 @@ textarea.input {
   color: var(--color-main);
 }
 
+.anchors {
+  position: fixed;
+  top: 0;
+  right: 1%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 3.125rem;
+  padding: 1.875rem 0px;
+}
+.anchors::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0.0625rem;
+  height: 100%;
+  background: var(--color-background);
+}
+@media (max-width: 93.75em) {
+  .anchors {
+    display: none;
+  }
+}
+.anchors__link {
+  position: relative;
+  z-index: 2;
+  line-height: 1;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 0.0625rem solid var(--color-background);
+  color: var(--color-background);
+  font-size: 2.25rem;
+  background: #fff;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.anchors__link._highlight {
+  border: 0.0625rem solid var(--color-main);
+  background: var(--color-main);
+  color: #fff;
+}
+
 .header {
+  position: relative;
+  z-index: 10;
   padding: 3.75rem 0px 2.1875rem;
+  background: #fff;
 }
 .wrapper_index .header {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
   padding: 1.25rem 0px;
+  background: transparent;
 }
 .header__top {
   display: -webkit-box;
@@ -7509,6 +7575,8 @@ textarea.input {
 }
 
 .footer {
+  position: relative;
+  z-index: 5;
   background: #000;
   color: #fff;
   padding: 3.75rem 0px;
@@ -8599,6 +8667,7 @@ textarea.input {
 
 .inner-head {
   position: relative;
+  z-index: 5;
   margin: 0px 0px 5.625rem 0px;
 }
 @media (max-width: 47.9375em) {
