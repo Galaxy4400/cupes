@@ -455,6 +455,26 @@
 		top: 0;
 		left: 0;
 	}
+	// .gallery-slide__content
+	&__content {
+		position: relative;
+		z-index: 1;
+		padding: rem(60) rem(110);
+		display: flex;
+		align-items: center;
+		height: 100%;
+		@media (max-width: em($md2)) {
+			padding: rem(60);
+		}
+		@media (max-width: em($md3)) {
+			padding: rem(30);
+		}
+	}
+	// .gallery-slide__title
+	&__title {
+		max-width: rem(644);
+		color: #fff !important;
+	}
 }
 
 //===============================================================

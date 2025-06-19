@@ -8951,6 +8951,32 @@ textarea.input {
   top: 0;
   left: 0;
 }
+.gallery-slide__content {
+  position: relative;
+  z-index: 1;
+  padding: 3.75rem 6.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+@media (max-width: 61.9375em) {
+  .gallery-slide__content {
+    padding: 3.75rem;
+  }
+}
+@media (max-width: 47.9375em) {
+  .gallery-slide__content {
+    padding: 1.875rem;
+  }
+}
+.gallery-slide__title {
+  max-width: 40.25rem;
+  color: #fff !important;
+}
 
 .management {
   display: grid;
